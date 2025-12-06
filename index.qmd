@@ -65,13 +65,7 @@ Notice the letter "k" at the end of "10.6k" as an example.
 
 We can remove the "k" and multiply those values by 1000 with the following code:
 
-```{python}
-for col in ["2021", "2022"]:
-    has_k = emissions[col].str.contains("k")
-    values = emissions[col].str.replace("k", "")
-    emissions[col] = np.where(has_k, values.astype(float) * 1000, values.astype(float))
-```
-**EDIT: Since there's no k's in my data, this gives out an error message.**
+**EDIT: Since there's no k's in my data, the last code section gives out an error message, which is why I removed it.**
 
 And check that it worked:
 
